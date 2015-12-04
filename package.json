@@ -1,14 +1,23 @@
 {
-  "name": "random-quotes-generator",
-  "version": "1.0.0",
-  "description": "this is a random quotes generator made with some of my favorite quotes",
-  "main": "main.ctrl.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.13.3"
-  }
+    "name": "random-quotes-generator",
+    "version": "1.0.0",
+    "description": "this is a random quotes generator made with some of my favorite quotes",
+    "main": "server.js",
+    "scripts": {
+        "start": "node ./bin/www",
+        "postinstall": "./node_modules/.bin/bower install && ./node_modules/.bin/grunt"
+    },
+    "author": "con",
+    "license": "ISC",
+    "dependencies": {
+        "bower": "^1.6.9",
+        "express": "^4.13.3",
+        "grunt": "^0.4.5",
+        "grunt-cli": "^0.1.13",
+        "grunt-sass": "^1.1.0"
+    },
+    "engines": {
+        "node": "0.10.26",
+        "npm": "1.4.3"
+    }
 }
