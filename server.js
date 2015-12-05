@@ -18,7 +18,10 @@ app.get('/api/quotes', function(req, res) {
 
 var server = app.listen(3000, function() {
     var host = server.address().address;
-    var port = server.address().port;
+    // when on Heroku, port will be exported to an environment variable
+    // and available as process.env.PORT
+    var port = process.env.PORT || server.address().port;;
+
 
     console.log('Example app listening at http://%s:%s', host, port);
 });
