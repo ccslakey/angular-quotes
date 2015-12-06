@@ -4,7 +4,9 @@ var quotes = require("../quotesDB");
 
 
 router.get('/', function(req, res) {
-    res.json(quotes);
+    res.render('quotes',{
+    	quotes: quotes
+    })
 });
 
 module.exports = router;

@@ -2,7 +2,7 @@ angular.module('app', []);
 
 angular.module('app').controller("MainController", ['$http', function($http) {
     var vm = this;
-    vm.title = 'Angular Quotes';
+    vm.title = 'Angularish Quotes';
     // declare input box
     vm.searchInput = '';
 
@@ -11,7 +11,7 @@ angular.module('app').controller("MainController", ['$http', function($http) {
         vm.new = {};
     };
 
-    $http.get('/api/quotes').success(function(data) {
+    $http.get('/quotes').success(function(data) {
         vm.quotes = data
             // console.log(vm.quotes) its our quotesDB.js array! wewt
     })
